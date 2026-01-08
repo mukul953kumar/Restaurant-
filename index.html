@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hello Chatore | Meerut</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#fff;
+    color:#333;
+}
+
+/* Header */
+header{
+    position:sticky;
+    top:0;
+    background:#fff;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    z-index:100;
+}
+nav{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+nav h1{
+    color:#e63946;
+}
+nav a{
+    text-decoration:none;
+    margin-left:20px;
+    color:#333;
+    font-weight:500;
+}
+
+/* Hero */
+.hero{
+    height:90vh;
+    background:url('images/new.jpg') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+}
+.hero-content{
+    background:rgba(0,0,0,0.55);
+    color:#fff;
+    padding:40px;
+    max-width:500px;
+    margin-left:50px;
+    border-radius:12px;
+}
+.hero-content h2{
+    font-size:42px;
+}
+.hero-content p{
+    margin:15px 0;
+}
+.hero-content a{
+    display:inline-block;
+    padding:12px 25px;
+    background:#e63946;
+    color:#fff;
+    border-radius:30px;
+    text-decoration:none;
+}
+
+/* About Us */
+.about{
+    background:#f8f9fa;
+}
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+.about-text h3{
+    font-size:32px;
+    color:#e63946;
+    margin-bottom:20px;
+}
+.about-text p{
+    margin-bottom:15px;
+    line-height:1.6;
+}
+.about-image{
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+.about-image img{
+    width:100%;
+    height:350px;
+    object-fit:contain;
+    background:#f8f9fa;
+}
+
+/* Section */
+section{
+    padding:70px 20px;
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+.section-title h2{
+    font-size:36px;
+    color:#e63946;
+}
+
+/* Cards */
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+.card{
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+.card-body{
+    padding:20px;
+}
+.card-body h3{
+    margin-bottom:8px;
+}
+
+/* Gallery */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+.gallery img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:12px;
+    transition:0.3s;
+}
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* Menu */
+.menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+.menu-item{
+    padding:20px;
+    border-radius:12px;
+    background:#fff3f3;
+}
+.menu-item h4{
+    display:flex;
+    justify-content:space-between;
+}
+
+/* Menu Card Section */
+.menu-card-section{
+    background:#fff;
+}
+.menu-card-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+.menu-card-text h3{
+    font-size:32px;
+    color:#e63946;
+    margin-bottom:20px;
+}
+.menu-card-text p{
+    margin-bottom:15px;
+    line-height:1.6;
+}
+.menu-card-image{
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+.menu-card-image img{
+    width:100%;
+    height:400px;
+    object-fit:contain;
+    background:#fff;
+}
+
+/* Contact */
+.contact-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+iframe{
+    width:100%;
+    height:300px;
+    border-radius:15px;
+    border:none;
+}
+
+/* Footer */
+footer{
+    background:#111;
+    color:#fff;
+    padding:40px 20px;
+}
+footer p{
+    text-align:center;
+    opacity:0.8;
+}
+
+/* Floating Button */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:#fff;
+    padding:15px;
+    border-radius:50%;
+    font-size:22px;
+    text-decoration:none;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .hero-content{
+        margin:20px;
+        padding:30px;
+    }
+    .hero-content h1{
+        font-size:36px;
+    }
+    .hero-content h4{
+        font-size:18px;
+    }
+    .contact-box,
+    .about-grid,
+    .menu-card-grid{
+        grid-template-columns:1fr;
+    }
+    .about-image img,
+    .menu-card-image img{
+        height:250px;
+    }
+    .card img{
+        height:180px;
+    }
+    .gallery img{
+        height:200px;
+    }
+    section{
+        padding:50px 15px;
+    }
+    .section-title h2{
+        font-size:28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<h1>Hello Chatore</h1>
+<div>
+<a href="#menu">Menu</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+<div class="hero-content">
+    <p>Welcome to</p>
+    <h1>Hello Chatore</h1>
+<h4>Delicious Street Food Restaurant in Meerut</h4>
+<p>Rated ⭐ 4.8 | ₹200–400 per person</p>
+<a href="tel:09627354130">Call Now</a>
+</div>
+</div>
+
+<!-- About Us -->
+<section class="about">
+<div class="container">
+<div class="about-grid">
+<div class="about-text">
+<h3>About Hello Chatore</h3>
+<p>Welcome to <strong>Hello Chatore</strong>, your favorite destination for delicious street food and quick bites in Meerut Cantt. We specialize in serving authentic vegetarian food that's loaded with flavors and made with fresh ingredients.</p>
+<p>Located at Bombay Bazar, we've been serving the community with mouth-watering chowmein, crispy momos, juicy burgers, and much more. Our casual and trendy atmosphere makes it perfect for solo dining or hanging out with friends.</p>
+<p>✅ <strong>100% Vegetarian</strong> | ✅ <strong>Quick Service</strong> | ✅ <strong>Affordable Prices</strong> | ✅ <strong>Fresh Ingredients</strong></p>
+<p><strong>Open Daily till 11:30 PM</strong> | Price Range: ₹200-400 per person</p>
+</div>
+<div class="about-image">
+<img src="images/banner.png" alt="Hello Chatore Restaurant">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Popular Items -->
+<section>
+<div class="container">
+<div class="section-title">
+<h2>Popular Items</h2>
+</div>
+
+<div class="card-grid">
+<div class="card">
+<img src="https://i.pinimg.com/736x/cc/0e/c6/cc0ec678549698920af1632150a0e361.jpg">
+<div class="card-body">
+<h3>Chowmein</h3>
+<p>Spicy & full of flavours</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://i.pinimg.com/1200x/e8/35/ed/e835ed89023c2a6d2d1933321d59efc4.jpg">
+<div class="card-body">
+<h3>Momos</h3>
+<p>Steam & fried momos</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://www.foodiesfeed.com/wp-content/uploads/2023/05/juicy-cheeseburger.jpg">
+<div class="card-body">
+<h3>Burger</h3>
+<p>Cheesy & crunchy</p>
+</div>
+</div>
+<div class="card">
+<img src="https://i.pinimg.com/1200x/cf/ae/55/cfae557a622e3aa155be2a25df9d57ab.jpg">
+<div class="card-body">
+<h3>French Fries</h3>
+<p>Crispy & golden</p>
+</div>
+</div>
+</section>
+
+
+<!-- Gallery -->
+<section id="gallery">
+<div class="container">
+<div class="section-title">
+<h2>Food Gallery</h2>
+</div>
+<div class="gallery">
+<img src="images/chole.png">
+<img src="images/sandwich.png">
+<img src="https://www.foodiesfeed.com/wp-content/uploads/2023/05/classic-pizza-margherita-with-basil-leaves.jpg">
+<img src="https://www.foodiesfeed.com/wp-content/uploads/ff-images/2024/12/refreshing-lemon-cheesecake-slice-with-mint-garnish.jpg">
+<img src="https://www.foodiesfeed.com/wp-content/uploads/2023/10/bowl-of-ice-cream-with-chocolate.jpg">
+<img src="https://www.foodiesfeed.com/wp-content/uploads/2023/05/juicy-cheeseburger.jpg">
+<img src="https://www.foodiesfeed.com/wp-content/uploads/2023/06/coffee-crema.jpg">
+<img src="https://www.foodiesfeed.com/wp-content/uploads/ff-images/2025/06/chocolate-chip-cookie-dough-cheesecake-slice.webp">
+</div>
+</div>
+</section>
+
+<!-- Menu -->
+<section id="menu">
+<div class="container">
+<div class="section-title">
+<h2>Our Menu</h2>
+</div>
+<div class="menu">
+<div class="menu-item">
+<h4>Veg Chowmein <span>₹80</span></h4>
+</div>
+<div class="menu-item">
+<h4>Fried Momos <span>₹120</span></h4>
+</div>
+<div class="menu-item">
+<h4>Cheese Burger <span>₹100</span></h4>
+</div>
+<div class="menu-item">
+<h4>French Fries <span>₹70</span></h4>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Menu Card Section -->
+<section class="menu-card-section">
+<div class="container">
+<div class="menu-card-grid">
+<div class="menu-card-text">
+<h3>Our Complete Menu Card</h3>
+<p>Explore our full range of delicious street food items with detailed pricing. From crispy chowmein to juicy momos, we have something for every taste bud.</p>
+<p>Our menu features <strong>100% vegetarian options</strong> made with fresh ingredients and authentic spices. All items are prepared fresh to order ensuring the best taste and quality.</p>
+<p>📋 <strong>Complete Price List</strong> | 🍽️ <strong>Variety of Options</strong> | ⚡ <strong>Quick Service</strong> | 💰 <strong>Affordable Rates</strong></p>
+<p><strong>Download our menu or call us for latest prices and combo offers!</strong></p>
+</div>
+<div class="menu-card-image">
+<img src="images/menu.png" alt="Hello Chatore Menu Card">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+<div class="container">
+<div class="section-title">
+<h2>Contact Us</h2>
+</div>
+
+<div class="contact-box">
+<div>
+<p><strong>📍 Address:</strong><br>177-R, Bombay Bazar, Meerut Cantt<br>Uttar Pradesh 250001, India</p>
+<br>
+<p><strong>📞 Phone:</strong> 096273 54130</p>
+<p><strong>💬 WhatsApp:</strong> 096273 54130</p>
+<br>
+<p><strong>⏰ Opening Hours:</strong><br>Monday - Sunday: 10:00 AM - 11:30 PM<br>Open all days of the week</p>
+<br>
+<p><strong>🍽️ Services:</strong><br>✅ Dine-in | ✅ Takeaway </p>
+<br>
+<p><strong>💳 Payment Options:</strong><br>Cash, UPI, Cards, NFC Mobile Payments</p>
+<br>
+<p><strong>🚗 Parking:</strong><br>Free parking available | Street parking</p>
+<br>
+<p><strong>💰 Price Range:</strong> ₹200-400 per person</p>
+</div>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3497.8!2d77.7003144!3d28.9989069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c65a1e77eb213%3A0x6e8dc3cd7a7bc5dd!2sHello%20Chatore!5e0!3m2!1sen!2sin!4v1703000000000!5m2!1sen!2sin"></iframe>
+</div>
+</div>
+</section>
+
+<footer>
+<p>© 2024 Hello Chatore | Made with ❤️ By Mukul</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919627354130">💬</a>
+
+</body>
+</html>
